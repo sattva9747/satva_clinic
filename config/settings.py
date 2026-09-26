@@ -3,11 +3,15 @@ Django settings for clinic_backend project.
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = '***REMOVED***'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True
 
@@ -23,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # Local apps
+    'appointments',
     'users.apps.UsersConfig',
 ]
 
@@ -107,3 +111,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
