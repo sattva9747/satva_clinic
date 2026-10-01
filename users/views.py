@@ -58,4 +58,3 @@ class LogoutView(APIView):
             {"message": "Logout successful"},
             status=status.HTTP_200_OK
         )
-
