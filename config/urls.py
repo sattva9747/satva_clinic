@@ -9,6 +9,7 @@ urlpatterns = [
     path("api/", include("users.urls")),
     
     path("api/therapists/", include("therapists.urls")),
+    path("api/", include("appointments.urls")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
