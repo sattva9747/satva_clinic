@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    
+    'faqs',
     'therapists',
     'appointments',
     'users.apps.UsersConfig',

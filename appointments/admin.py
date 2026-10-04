@@ -53,3 +53,4 @@ class AppointmentAdmin(admin.ModelAdmin):
                     )
 
         super().save_model(request, obj, form, change)
+        
