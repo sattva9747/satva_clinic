@@ -106,6 +106,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
+
+    "EXCEPTION_HANDLER": "config.exceptions.custom_exception_handler",
 }
 
 LANGUAGE_CODE = 'en-us'
